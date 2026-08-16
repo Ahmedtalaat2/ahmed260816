@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ahmed Algamal — I Build Systems That Bring You Clients</title>
+    <meta
+      name="description"
+      content="Ahmed Algamal — Ads, Web Development & Automation. Simple. Fast. Results."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ahmed Algamal" />
+    <meta
+      name="keywords"
+      content="Ahmed Algamal, Web Development, Meta Ads, n8n Automation, Lead Generation, Dubai, مطور ويب, إعلانات ميتا"
+    />
+    <link rel="canonical" href="https://ahmedalgamal.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ahmedalgamal.com/" />
+    <meta
+      property="og:title"
+      content="Ahmed Algamal — I Build Systems That Bring You Clients"
+    />
+    <meta
+      property="og:description"
+      content="Ahmed Algamal — Ads, Web Development & Automation. Simple. Fast. Results."
+    />
+    <meta
+      property="og:image"
+      content="https://ahmedalgamal.com/img/og-image.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Ahmed Algamal" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ahmed Algamal — I Build Systems That Bring You Clients"
+    />
+    <meta
+      name="twitter:description"
+      content="Ads, Web Development & Automation. Simple. Fast. Results."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ahmedalgamal.com/img/og-image.jpg"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmed Algamal",
+        "url": "https://ahmedalgamal.com",
+        "image": "https://ahmedalgamal.com/img/my-photo.svg",
+        "jobTitle": "Web Developer & Digital Marketing Specialist",
+        "description": "Building systems that combine Web Development, Meta Ads, and n8n Automation to help businesses grow.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Ahmed Algamal"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971507761628",
+          "contactType": "customer support",
+          "email": "info@ahmedalgamal.com",
+          "availableLanguage": ["English", "Arabic"]
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Meta Ads",
+          "Lead Generation",
+          "n8n Automation",
+          "CRM Automation"
+        ]
+      }
+    </script>
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LE5YGN61P1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LE5YGN61P1");
+    </script>
+
+    <!-- ============================================================
+       Meta Pixel
+       تم تفعيل الكود باستخدام Pixel ID الحالي الموجود في Meta
+  ============================================================ -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = true;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = true;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+
+      fbq("init", "1067536993119582");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1067536993119582&ev=PageView&noscript=1"
+        alt=""
+      />
+    </noscript>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- n8n Chat -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ============================================================
+       مؤشر الماوس المخصص لسطح المكتب
+  ============================================================ -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- ============================================================
+       n8n Chat Widget
+       نفس الـ webhook الحالي، مع تغيير ألوان الواجهة فقط
+  ============================================================ -->
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://n8n.ahmedalgamal.tech/webhook/72029706-a7a8-40dd-9522-858556bd7506/chat",
+        i18n: {
+          en: {
+            title: "Let's grow your business ",
+            subtitle: "",
+            inputPlaceholder: "اكتب رسالتك هنا...",
+            footer: "Website by Ahmed El-Gamal",
+          },
+        },
+        theme: {
+          primaryColor: "#26304B",
+          backgroundColor: "#FFFFFF",
+          textColor: "#26304B",
+          borderRadius: "18px",
+          chatWindow: {
+            backgroundColor: "#FFFFFF",
+          },
+          header: {
+            backgroundColor: "#26304B",
+            textColor: "#FFFFFF",
+          },
+          botMessage: {
+            backgroundColor: "#F3F5F8",
+            textColor: "#26304B",
+          },
+          userMessage: {
+            backgroundColor: "#26304B",
+            textColor: "#FFFFFF",
+          },
+          input: {
+            backgroundColor: "#F7F8FA",
+            textColor: "#26304B",
+            placeholderColor: "#7A8292",
+          },
+        },
+        initialMessages: ["Hi, I'm Ahmed. Let’s get you real customers. 🔥"],
+      });
+    </script>
+
+    <!-- ============================================================
+       Navbar
+       شريط التنقل الرئيسي للموقع
+  ============================================================ -->
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo" aria-label="Ahmed AlGamal - Home">
+          <img
+            src="img/my-photo.svg"
+            alt="Ahmed AlGamal"
+            class="nav-logo-img"
+            width="40"
+            height="40"
+          />
+          <span class="logo-name">Ahmed AlGamal</span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#results" class="nav-link">Results</a></li>
+          <li>
+            <a
+              href="https://blog.ahmedalgamal.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link"
+              >Blogger</a
+            >
+          </li>
+          <li><a href="#contact" class="nav-link nav-cta">Let's Talk</a></li>
+        </ul>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ============================================================
+         Hero
+         الصورة في المنتصف والنصوص موزعة حولها بنفس روح التصميم المرجعي
+    ============================================================ -->
+      <section class="hero" id="hero" aria-label="Hero Section">
+        <div class="geo-background geo-background-hero" aria-hidden="true">
+          <svg viewBox="0 0 700 900" preserveAspectRatio="none">
+            <g class="geo-lines">
+              <path
+                d="M60 20L250 90L190 250L390 160L520 300L410 470L620 550L540 740L690 870"
+              />
+              <path
+                d="M250 90L390 160L330 360L520 300L410 470L250 590L540 740L390 820"
+              />
+              <path d="M60 20L190 250L330 360L250 590L100 760L390 820" />
+              <path d="M390 160L620 40L520 300L690 190L620 550L690 870" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-topline" data-reveal>
+            <span class="availability-dot"></span>
+            <span>Available For New Projects</span>
+          </div>
+
+          <div class="hero-stage">
+            <!-- النص الرئيسي على اليسار -->
+            <div class="hero-side hero-side-left" data-reveal data-delay="100">
+              <h1 class="hero-headline">
+                I Build Systems<br />
+                That <span>Actually Work</span><br />
+                In Real Business.
+              </h1>
+            </div>
+
+            <!-- الصورة الشخصية في المنتصف -->
+            <div class="hero-person" data-reveal data-delay="200">
+              <div class="hero-person-frame" aria-hidden="true">
+                <span class="frame-line frame-line-1"></span>
+                <span class="frame-line frame-line-2"></span>
+                <span class="frame-line frame-line-3"></span>
+              </div>
+
+              <div class="hero-photo">
+                <img src="img/my-photo.svg" alt="Ahmed AlGamal" />
+              </div>
+            </div>
+
+            <!-- المعلومات والأزرار على اليمين -->
+            <div class="hero-side hero-side-right" data-reveal data-delay="300">
+              <p class="hero-sub">
+                Web Development + Automation + Ads.<br />
+                <strong>Simple systems. Clear logic. Real results.</strong>
+              </p>
+
+              <div class="hero-tags">
+                <span class="hero-tag"
+                  ><i class="fa-brands fa-meta"></i> Meta Ads</span
+                >
+                <span class="hero-tag"
+                  ><i class="fa-solid fa-code"></i> Web Dev</span
+                >
+                <span class="hero-tag"
+                  ><i class="fa-solid fa-robot"></i> AI Automation</span
+                >
+              </div>
+
+              <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                  Explore My Work
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                  See How I Think
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="hero-socials" data-reveal data-delay="350">
+              <a
+                href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ahmeedalgamal"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/+971507761628"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://github.com/Ahmedtalaat2"
+                class="social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <a
+              href="#results"
+              class="hero-scroll"
+              aria-label="Scroll to results"
+            >
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         About
+         نبذة أحمد، ما يقدمه، ولماذا يمكن الوثوق به
+    ============================================================ -->
+      <section
+        class="about section-pad"
+        id="about"
+        aria-label="About Ahmed Algamal"
+      >
+        <div class="container">
+          <div class="section-heading section-heading-split" data-reveal>
+            <div>
+              <span class="section-label">About Me</span>
+              <h2 class="section-title">Who Is <span>Ahmed Algamal?</span></h2>
+            </div>
+          </div>
+
+          <div class="about-grid">
+            <article class="about-card" data-reveal>
+              <div class="card-number">01</div>
+              <div class="about-card-icon">
+                <i class="fa-solid fa-user-astronaut"></i>
+              </div>
+              <h3>The Person</h3>
+              <p>
+                I'm Ahmed, a developer who focuses on building simple and
+                practical systems that actually work in real business
+                environments.
+              </p>
+            </article>
+
+            <article class="about-card" data-reveal data-delay="100">
+              <div class="card-number">02</div>
+              <div class="about-card-icon">
+                <i class="fa-solid fa-fire"></i>
+              </div>
+              <h3>What I Do</h3>
+              <p>
+                I connect websites, ads, and automation into one clear system
+                instead of using random disconnected tools.
+              </p>
+            </article>
+
+            <article class="about-card" data-reveal data-delay="200">
+              <div class="card-number">03</div>
+              <div class="about-card-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3>Why Trust Me</h3>
+              <p>
+                I focus on clarity, speed, and results — not just design or
+                theory. Everything I build is meant to be used, not just seen.
+              </p>
+            </article>
+          </div>
+
+          <div class="about-story" data-reveal>
+            <div class="quote-mark"><i class="fa-solid fa-quote-left"></i></div>
+            <p>
+              I started as someone who simply enjoyed building things on the
+              internet. Over time, I realized most businesses struggle with the
+              same problems: unclear systems, weak conversion, and too much
+              manual work. So instead of offering separate services, I focused
+              on building connected systems that solve all of that together.
+              Simple. Practical. Effective.
+            </p>
+            <div class="story-signature">— Ahmed Algamal</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         Services
+         الخدمات الثلاثة الحالية بدون تغيير في المعلومات
+    ============================================================ -->
+      <section class="services section-pad" id="services" aria-label="Services">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="section-label">What I Offer</span>
+            <h2 class="section-title">
+              Three Tools.<br /><span>One Goal: Your Growth.</span>
+            </h2>
+          </div>
+
+          <div class="services-list">
+            <article class="service-row" data-reveal>
+              <div class="service-index">01</div>
+              <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
+              <div class="service-main">
+                <h3>Meta Ads &amp; Lead Gen</h3>
+                <p>
+                  I design ad systems that attract the right audience and guide
+                  them into a clear and structured flow.
+                </p>
+                <ul class="service-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i> Facebook &amp; Instagram
+                    Ads
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Lead Generation Funnels
+                  </li>
+                </ul>
+              </div>
+              <a href="#contact" class="service-link"
+                >Learn More <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </article>
+
+            <article
+              class="service-row service-row-featured"
+              data-reveal
+              data-delay="100"
+            >
+              <div class="service-index">02</div>
+              <div class="service-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="service-main">
+                <span class="service-badge">Most Popular</span>
+                <h3>Web Development</h3>
+                <p>
+                  I build clean and fast websites focused on user experience and
+                  clear communication.
+                </p>
+                <ul class="service-features">
+                  <li>
+                    <i class="fa-solid fa-check"></i> Landing Pages that Convert
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> Fast &amp; Mobile Ready
+                  </li>
+                </ul>
+              </div>
+              <a href="#contact" class="service-link"
+                >Learn More <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </article>
+
+            <article class="service-row" data-reveal data-delay="200">
+              <div class="service-index">03</div>
+              <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+              <div class="service-main">
+                <h3>Automation (n8n)</h3>
+                <p>
+                  I create automation workflows that reduce manual work and keep
+                  everything running consistently.
+                </p>
+                <ul class="service-features">
+                  <li><i class="fa-solid fa-check"></i> n8n Workflows</li>
+                  <li>
+                    <i class="fa-solid fa-check"></i> CRM &amp; Email Automation
+                  </li>
+                </ul>
+              </div>
+              <a href="#contact" class="service-link"
+                >Learn More <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         Projects
+         عرض المشاريع الثلاثة الحالية بطريقة Editorial
+    ============================================================ -->
+      <section class="projects section-pad" id="projects" aria-label="Projects">
+        <div class="geo-background geo-background-projects" aria-hidden="true">
+          <svg viewBox="0 0 700 900" preserveAspectRatio="none">
+            <g class="geo-lines">
+              <path
+                d="M40 120L210 40L360 190L520 100L670 250L540 420L680 600L500 820L290 690L90 840"
+              />
+              <path
+                d="M210 40L260 280L360 190L390 430L540 420L500 620L680 600"
+              />
+              <path
+                d="M40 120L260 280L90 840L290 690L390 430L500 620L500 820"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="section-heading section-heading-split" data-reveal>
+            <div>
+              <span class="section-label">My Work</span>
+              <h2 class="section-title">
+                Projects That <span>Actually Worked.</span>
+              </h2>
+            </div>
+          </div>
+
+          <div class="project-list">
+            <article class="project-item" data-reveal>
+              <div class="project-number">01</div>
+              <div class="project-preview">
+                <img src="img/dash.png" alt="Smart Calculator App" />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span>Web App</span><span>JavaScript</span>
+                </div>
+                <h3>Smart Calculator App</h3>
+                <p>
+                  Built a clean and responsive tool focused on usability and
+                  performance rather than complexity.
+                </p>
+                <a
+                  href="#"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item project-item-reverse" data-reveal>
+              <div class="project-number">02</div>
+              <div class="project-preview">
+                <img src="img/land.png" alt="High-Converting Landing Page" />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span>Landing Page</span><span>Conversion</span>
+                </div>
+                <h3>High-Converting Landing Page</h3>
+                <p>
+                  Improved structure and clarity which led to a noticeable
+                  increase in conversion rate.
+                </p>
+                <a
+                  href="#"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item" data-reveal>
+              <div class="project-number">03</div>
+              <div class="project-preview">
+                <img src="img/n8n.png" alt="Lead Capture Automation" />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span>n8n</span><span>Automation</span>
+                </div>
+                <h3>Lead Capture Automation</h3>
+                <p>
+                  Created a workflow that connects lead capture with WhatsApp
+                  and CRM to reduce response time and manual work.
+                </p>
+                <a
+                  href="#"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         Results
+         الأرقام الحالية وفوائد الأنظمة
+    ============================================================ -->
+      <section
+        class="results section-pad"
+        id="results"
+        aria-label="Results and Statistics"
+      >
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <span class="section-label">Real Results</span>
+            <h2 class="section-title">Numbers Don't <span>Lie.</span></h2>
+          </div>
+
+          <div class="stats-grid" data-reveal>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="300" data-suffix="%">0</div>
+              <div class="stat-label">Systems Built &amp; Improved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="5" data-suffix="+">0</div>
+              <div class="stat-label">Leads Processed Through Systems</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="48" data-suffix="h">0</div>
+              <div class="stat-label">Average Delivery Speed</div>
+            </div>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit-card" data-reveal>
+              <div class="benefit-index">01</div>
+              <div class="benefit-icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+              <h3>More Leads</h3>
+              <p>
+                Better systems create better flow — which leads to better
+                results over time.
+              </p>
+            </article>
+
+            <article class="benefit-card" data-reveal data-delay="100">
+              <div class="benefit-index">02</div>
+              <div class="benefit-icon">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <h3>Faster Work</h3>
+              <p>
+                Automation removes repetitive tasks and saves valuable time.
+              </p>
+            </article>
+
+            <article class="benefit-card" data-reveal data-delay="200">
+              <div class="benefit-index">03</div>
+              <div class="benefit-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h3>Less Manual Effort</h3>
+              <p>
+                Everything is connected, so less effort is needed to keep things
+                running.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         Contact
+         بيانات التواصل ونموذج إرسال الرسائل كما هي
+    ============================================================ -->
+      <section
+        class="contact section-pad"
+        id="contact"
+        aria-label="Contact Ahmed Algamal"
+      >
+        <div class="geo-background geo-background-contact" aria-hidden="true">
+          <svg viewBox="0 0 700 900" preserveAspectRatio="none">
+            <g class="geo-lines">
+              <path
+                d="M70 30L240 160L160 350L350 260L530 410L430 590L650 730L540 880"
+              />
+              <path d="M240 160L350 260L300 480L430 590L280 720L540 880" />
+              <path d="M70 30L160 350L300 480L120 650L280 720" />
+              <path d="M530 410L650 250L650 730" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="contact-header" data-reveal>
+            <span class="section-label">Let's Work Together</span>
+            <h2 class="section-title">
+              Ready to <span>Grow Your Business?</span>
+            </h2>
+          </div>
+
+          <div class="contact-wrap">
+            <div class="contact-info" data-reveal>
+              <a
+                href="https://wa.me/+971507761628"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card"
+              >
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>Chat instantly</span>
+                </div>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square contact-arrow"
+                ></i>
+              </a>
+
+              <a href="mailto:info@ahmedalgamal.com" class="contact-card">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <span>info@ahmedalgamal.com</span>
+                </div>
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square contact-arrow"
+                ></i>
+              </a>
+
+              <div class="next-steps">
+                <div class="next-steps-heading">
+                  <span>WHAT HAPPENS NEXT?</span>
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+                <ol>
+                  <li><span>01</span> You share your idea</li>
+                  <li><span>02</span> We simplify it together</li>
+                  <li><span>03</span> I build the system</li>
+                  <li><span>04</span> You start seeing results</li>
+                </ol>
+              </div>
+            </div>
+
+            <form
+              class="contact-form"
+              id="contactForm"
+              novalidate
+              data-reveal
+              data-delay="100"
+            >
+              <div class="form-group">
+                <label for="contactName" class="sr-only">Your Name</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone" class="sr-only">Phone Number</label>
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactService" class="sr-only"
+                  >Choose a service</label
+                >
+                <select id="contactService" name="service">
+                  <option value="">Choose a service...</option>
+                  <option value="Meta Ads / Lead Generation">
+                    Meta Ads / Lead Generation
+                  </option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Automation (n8n)">Automation (n8n)</option>
+                  <option value="Full Package (All Three)">
+                    Full Package (All Three)
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="sr-only"
+                  >Tell me about your business</label
+                >
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about your business"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">
+                Send Message
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div class="form-success" id="formSuccess" role="alert">
+                ✓ Message sent! I'll reply within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       Footer
+       التذييل ويحافظ على روابط الموقع والخدمات والتواصل الحالية
+  ============================================================ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section footer-brand">
+            <div class="footer-logo">
+              <img
+                src="img/my-photo.svg"
+                alt="Ahmed AlGamal"
+                class="footer-logo-img"
+                width="40"
+                height="40"
+              />
+              <span>Ahmed AlGamal</span>
+            </div>
+            <p class="footer-tagline">
+              Building simple systems that make work easier.
+            </p>
+            <p class="footer-desc">
+              Focused on web development, automation, and building systems that
+              actually work.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#results">Results</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="#services">Meta Ads &amp; Lead Gen</a></li>
+              <li><a href="#services">Web Development</a></li>
+              <li><a href="#services">Ai Automation</a></li>
+              <li><a href="#contact">Get a Free Consultation</a></li>
+              <li><a href="#contact">Custom Quote</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3 class="footer-title">Get In Touch</h3>
+            <div class="footer-contact">
+              <a
+                href="https://wa.me/+971507761628"
+                class="contact-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+              </a>
+              <a href="mailto:info@ahmedalgamal.com" class="contact-btn">
+                <i class="fa-solid fa-envelope"></i><span>Email</span>
+              </a>
+              <a href="#contact" class="contact-btn">
+                <i class="fa-solid fa-paper-plane"></i><span>Contact Form</span>
+              </a>
+            </div>
+
+            <h3 class="footer-title footer-follow-title">Follow Me</h3>
+            <div class="footer-socials">
+              <a
+                href="https://www.linkedin.com/in/ahmed-al-gamal-6906ab204?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/ahmeedalgamal?igsh=MTF3cnJmbjQ1cWVrNg=="
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://github.com/Ahmedtalaat2"
+                class="social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2025 Ahmed Algamal. All rights reserved - Built with
+            <span class="heart">❤️</span> and powered by code.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="Ahmed-AlGamal-script.js"></script>
+  </body>
+</html>
